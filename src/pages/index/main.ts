@@ -1,11 +1,14 @@
 import Vue from 'vue';
 import App from './App.vue';
-import router from '@/router/router';
-import AMap from 'AMap';
+import router from './router/router';
+import axios from 'axios';
 
 Vue.config.productionTip = false;
 
-Vue.prototype.$AMap = AMap;
+Vue.use((v) => {
+  v.prototype.$axios = axios
+});
+
 new Vue({
   router,
   render: (h) => h(App),

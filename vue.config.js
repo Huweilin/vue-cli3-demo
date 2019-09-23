@@ -22,4 +22,11 @@ module.exports = {
   //      'AMap' : 'AMap',
   //   }
   // },
+  devServer: {
+    watchOptions: {
+      aggregateTimeout: 300,
+      ignored: /node_modules/,
+      poll: 1000,
+    }
+  }
 }
